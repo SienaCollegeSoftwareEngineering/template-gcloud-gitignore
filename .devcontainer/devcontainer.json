@@ -1,9 +1,9 @@
 {
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
   "forwardPorts": [3000, 5500, 9000],
-  "features": {
-    "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
-  },
+  // "features": {
+  //   "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+  // },
   "hostRequirements": {
     "cpus": 4,
     "memory": "8gb"
