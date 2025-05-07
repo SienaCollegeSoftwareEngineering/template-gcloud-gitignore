@@ -1,5 +1,5 @@
 {
-  "image" : "mcr.microsoft.com/devcontainers/universal:linux",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
   "forwardPorts": [3000, 5500, 9000],
   "features": {
     "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
@@ -11,20 +11,24 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "esbenp.prettier-vscode",
-        "yandeu.five-server",
+        "-GitHub.copilot-chat",
         "-GitHub.copilot",
-        "-GitHub.copilot-chat"
+        "esbenp.prettier-vscode",
+        "yandeu.five-server"
       ],
       "settings": {
+        "settingsSync.enable": false,
+        "settingsSync.ignoredExtensions": [
+          "GitHub.copilot",
+          "GitHub.copilot-chat"
+        ],
         "editor.formatOnSave": true,
         "files.autoSave": "onWindowChange",
-        "github.copilot.enable": false,
-        "github.copilot.inlineSuggest.enable": false,
-        "files.exclude": {
-          "**/node_modules": true,
-          "**/dist": true,
-          "**/coverage": true
+        "github.copilot.enable": {
+          "*": false,
+          "plaintext": false,
+          "markdown": false,
+          "scminput": false
         }
       }
     }
